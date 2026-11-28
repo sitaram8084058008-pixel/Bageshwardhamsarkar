@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -143,7 +144,7 @@
     <hr class="red-line">
 
     <div id="b">
-      <img src="wp15648808.jpg" class="responsive-img" alt="Bageshwar Dham Bala Ji">
+      <img id="slide-img" src="wp15648808.jpg" class="responsive-img" alt="Bageshwar Dham Bala Ji">
     </div>
 
     <table>
@@ -191,6 +192,21 @@
     <p><strong>CONTACT US:</strong> <a href="mailto:sitaram9471606484@gmail.com">E-MAIL</a></p>
     <p id="f"><a href="https://www.bageshwardham.co.in" target="_blank" rel="noopener">OUR DETAILS</a></p>
   </div>
+
+  <script>
+    const images = [
+      { src: "wp15648808.jpg", alt: "Bageshwar Dham Bala Ji" },
+      { src: "Bageshwar%20dham%20sarkar.jpg", alt: "Bageshwar Dham Sarkar" }
+    ];
+    let index = 0;
+    const imgElement = document.getElementById("slide-img");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      imgElement.src = images[index].src;
+      imgElement.alt = images[index].alt;
+    }, 3000);
+  </script>
 
 </body>
 </html>
